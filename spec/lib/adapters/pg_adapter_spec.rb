@@ -1,4 +1,4 @@
-# frozen_string_literal: true
+ # frozen_string_literal: true
 
 require "rails_helper"
 
@@ -10,8 +10,7 @@ RSpec.describe Adapters::PgAdapter do
     let(:paginated_results) { double }
     let(:mock_results) do
       double.tap do |results|
-        allow(results).to receive_messages(includes: results, paginate: paginated_results, text_search: results,
-                                           order: results)
+        allow(results).to receive_messages(includes: results, paginate: paginated_results, text_search: results, order: results)
       end
     end
 
